@@ -7,8 +7,7 @@ public class Main {
     public static void main(String[] args) {
     CreateAnimalService createAnimalService = new CreateAnimalService();
     createAnimalService.create10Animals();
-    CreateAnimalServiceImpl createAnimalServiceimpl = new CreateAnimalServiceImpl();
-    createAnimalServiceimpl.createNAnimals(2);
+    CreateAnimalServiceImpl createAnimalServiceimpl = new CreateAnimalServiceImpl(2); //перегруженный метод, вызов при создании конструктора
     createAnimalServiceimpl.createDoWhileAnimals();
     }
 }

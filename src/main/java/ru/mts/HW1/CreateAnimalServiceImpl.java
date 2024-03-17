@@ -4,8 +4,7 @@ import java.util.Random;
 
 public class CreateAnimalServiceImpl {
 
-
-        public void createNAnimals(Integer num){
+    public CreateAnimalServiceImpl(Integer num){
         System.out.print("\n\n\nHome Work #1. Part2. (N Animals)\n");
         Wolf wolf = new Wolf();
         Shark shark = new Shark();
@@ -20,7 +19,6 @@ public class CreateAnimalServiceImpl {
             if (name.equals("Rabbit")) rabbit.printRabbit();
             if (name.equals("Horse")) horse.printHorse();
         }
-
     }
     public void createDoWhileAnimals() {
         System.out.print("\n\n\nHome Work #1. Part3. (5 Animals with do while)\n");
