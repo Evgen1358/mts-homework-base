@@ -9,5 +9,6 @@ public class Main {
     createAnimalService.create10Animals();
     CreateAnimalServiceImpl createAnimalServiceimpl = new CreateAnimalServiceImpl();
     createAnimalServiceimpl.createNAnimals(2);
+    createAnimalServiceimpl.createDoWhileAnimals();
     }
 }
