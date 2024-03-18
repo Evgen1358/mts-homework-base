@@ -1,12 +1,10 @@
 package ru.mts.HW1;
 
-import java.util.Random;
+//import java.util.Random;
 
-public class CreateAnimalServiceImpl {
+public class CreateAnimalServiceImpl implements CreateAnimalService{
 
-
-        public void createNAnimals(Integer num){
-        System.out.print("\n\n\nHome Work #1. Part2. (N Animals)\n");
+/*        System.out.print("\n\n\nHome Work #1. Part2. (N Animals)\n");
         Wolf wolf = new Wolf();
         Shark shark = new Shark();
         Rabbit rabbit = new Rabbit();
@@ -19,11 +17,8 @@ public class CreateAnimalServiceImpl {
             if (name.equals("Shark")) shark.printShark();
             if (name.equals("Rabbit")) rabbit.printRabbit();
             if (name.equals("Horse")) horse.printHorse();
-        }
-
-    }
-    public void createDoWhileAnimals() {
-        System.out.print("\n\n\nHome Work #1. Part3. (5 Animals with do while)\n");
+        }*/
+/*        System.out.print("\n\n\nHome Work #1. Part3. (5 Animals with do while)\n");
         Wolf wolf = new Wolf();
         Shark shark = new Shark();
         Rabbit rabbit = new Rabbit();
@@ -38,6 +33,5 @@ public class CreateAnimalServiceImpl {
             if (name.equals("Rabbit")) rabbit.printRabbit();
             if (name.equals("Horse")) horse.printHorse();
             i--;
-        }
-    }
+        }*/
 }
