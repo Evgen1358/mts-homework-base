@@ -5,6 +5,6 @@ import ru.mts.HW1.CreateAnimalServiceImpl;
 public class Main {
     public static void main(String[] args){
         CreateAnimalServiceImpl createAnimalService = new CreateAnimalServiceImpl();
-        createAnimalService.createAnimals();
+        createAnimalService.createAnimals(12);
     }
 }
