@@ -1,11 +1,15 @@
 package ru.mts.HW1;
 
+import ru.mts.HW2.InvalidAnimalException;
 import ru.mts.HW2.SearchService;
 import ru.mts.HW2.SearchServiceImpl;
 import ru.mts.HW2.SetYear;
 
-public class Rabbit extends Herbivorous{
-    public void printRabbit(){
+import java.io.IOException;
+import java.time.LocalDate;
+
+public class Rabbit extends Herbivorous {
+    public void printRabbit() {
         setName("Кролик");
         setYear(new SetYear().SetYear());
         setHerbivorous();
@@ -13,8 +17,14 @@ public class Rabbit extends Herbivorous{
         System.out.print(". Группа питания: " + getGroup());
         System.out.print(". Характер: " + getCharacter());
         System.out.print(". Возможность одомашнивания: " + getPet().toString());
-        System.out.print(". Дата рождения: " + getYear().toString());
+        System.out.print(". Дата рождения: " /*+ getYear().toString()*/);
         SearchService searchService = new SearchServiceImpl();
-        searchService.checkLeapYearAnimal(birthDate);
+        LocalDate nll = null;
+        try {
+            searchService.checkLeapYearAnimal(nll);
+        } catch (NullPointerException e) {
+            String ex = String.format("у животного %s не указана дата его рождения", name);
+            System.out.println("\n" + ex);
+        }
     }
 }
