@@ -1,12 +1,14 @@
 package ru.mts.HW1;
 
+import ru.mts.HW2.InvalidAnimalException;
+
 import java.util.Random;
 
-public class CreateAnimalServiceImpl {
+public class CreateAnimalServiceImpl implements CreateAnimalService{
 
-
-        public void createNAnimals(Integer num){
-        System.out.print("\n\n\nHome Work #1. Part2. (N Animals)\n");
+    @Override
+    public void createAnimals(Integer num) throws InvalidAnimalException {
+        System.out.print("\n\n\nHome Work #2. Part1. (add Birthday & check for leapYear)\n");
         Wolf wolf = new Wolf();
         Shark shark = new Shark();
         Rabbit rabbit = new Rabbit();
@@ -19,25 +21,6 @@ public class CreateAnimalServiceImpl {
             if (name.equals("Shark")) shark.printShark();
             if (name.equals("Rabbit")) rabbit.printRabbit();
             if (name.equals("Horse")) horse.printHorse();
-        }
-
-    }
-    public void createDoWhileAnimals() {
-        System.out.print("\n\n\nHome Work #1. Part3. (5 Animals with do while)\n");
-        Wolf wolf = new Wolf();
-        Shark shark = new Shark();
-        Rabbit rabbit = new Rabbit();
-        Horse horse = new Horse();
-        Random random = new Random();
-        String[] names = {"Wolf", "Shark", "Rabbit", "Horse"};
-        int i = 5;
-        while (i >= 1) {
-            String name = names[random.nextInt(names.length)];
-            if (name.equals("Wolf")) wolf.printWolf();
-            if (name.equals("Shark")) shark.printShark();
-            if (name.equals("Rabbit")) rabbit.printRabbit();
-            if (name.equals("Horse")) horse.printHorse();
-            i--;
         }
     }
 }
